@@ -66,6 +66,7 @@ export async function calculateBalance(user_id) {
     let roundedBalance = 0;
 
     for (let transaction of transactions) {
+        if (transaction.amount < 0) continue;
         balance = balance + transaction.amount;
         roundedBalance = roundedBalance + Math.ceil(transaction.amount);
     }

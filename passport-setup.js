@@ -28,8 +28,8 @@ export default function passportSetup() {
     //   credentials (in this case, an accessToken, refreshToken, and Google
     //   profile), and invoke a callback with a user object.
     passport.use(new GoogleStrategy({
-        clientID: '650005459427-bot52mrh219istg55j91pki6snga191v.apps.googleusercontent.com',
-        clientSecret: 'B8r_8XsCEA0jzOnxDAw_IHGk',
+        clientID: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: "http://localhost:3000/google/callback"
     },
         function (accessToken, refreshToken, profile, done) {

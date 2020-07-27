@@ -55,12 +55,13 @@
             </thead>
             <tbody>
               <% if (data.transactions !== null) {%> 
-                <% for (let transaction of data.transactions) { %> 
-                <tr class="table-default">
-                  <td><%= transaction.date %></td>
-                  <td><%= transaction.name %></td>
-                  <td>$<%= transaction.amount %></td>
-                </tr>
+                <% for (let transaction of data.transactions) { %>
+                  <% if (transaction.amount < 0) { continue; }%> 
+                  <tr class="table-default">
+                    <td><%= transaction.date %></td>
+                    <td><%= transaction.name %></td>
+                    <td>$<%= transaction.amount %> </td>
+                  </tr>
                 <% } %> 
               <% } %>
             </tbody>
@@ -112,11 +113,11 @@
         var right = $(this).find('.progress-right .progress-bar');
 
         if (value > 0) {
-          if (value <= 50) {
+          if (value <= 2.5) {
             right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
           } else {
             right.css('transform', 'rotate(180deg)')
-            left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+            left.css('transform', 'rotate(' + percentageToDegrees(value - 2.5) + 'deg)')
           }
         }
 
