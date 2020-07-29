@@ -64,7 +64,7 @@ export async function calculateBalance(user_id) {
     const transactions = await plaidFunctions.getTransactionData(user_id);
     let balance = 0;
     let roundedBalance = 0;
-
+    if (transactions == null) return [0, 0];
     for (let transaction of transactions) {
         if (transaction.amount < 0) continue;
         balance = balance + transaction.amount;

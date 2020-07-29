@@ -22,7 +22,7 @@ export async function createLinkToken(req, res) {
         user: {
             client_user_id: clientUserId,
         },
-        client_name: 'Myself',
+        client_name: 'Walnut',
         products: ['transactions'],
         country_codes: ['US'],
         language: 'en'
