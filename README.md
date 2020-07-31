@@ -7,4 +7,6 @@ Check the app out here: https://walnut-app.mybluemix.net/
 
 https://github.com/benjamingarcia10/sjsu-spartans
 
-![Walnut](https://i.gyazo.com/091a3bec15618f5b909daac535f8f387.png)
+![Walnut](https://i.gyazo.com/c9880449c0c3af3f508f54b281ce8f85.jpg)
+![Walnut](https://i.gyazo.com/4cca26719574a142036ff30eec1b1208.png)
+![Walnut](https://i.gyazo.com/684f1307a1ccadd12cbf0811e125347f.png)
